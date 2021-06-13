@@ -1,0 +1,55 @@
+<head>
+    <title>Add Salary</title>
+<script>
+function fun()
+{
+  var basic=document.getElementById("id2").value;
+ document.getElementById("id3").value=(basic*10)/100;
+  document.getElementById("id4").value=(basic*5)/100;
+  document.getElementById("id5").value=(basic*7)/100;
+  document.getElementById("id6").value=(basic*5)/100;
+  document.getElementById("id7").value=(basic*2)/100;
+  document.getElementById("id8").value=(basic*12)/100;
+ document.getElementById("id9").value=(basic*5)/100;
+  var hra=document.getElementById("id3").value;
+  var ta=document.getElementById("id4").value;
+  var da=document.getElementById("id5").value;
+  var allowance=parseInt(hra)+parseInt(ta)+parseInt(da);
+  document.getElementById("id10").value=allowance;
+  var loan=document.getElementById("id6").value;
+  var esi=document.getElementById("id7").value;
+  var pf=document.getElementById("id8").value;
+  var it=document.getElementById("id9").value;
+  var deduction=parseInt(loan)+parseInt(esi)+parseInt(pf)+parseInt(it);
+  document.getElementById("id11").value=deduction;
+  var gross=parseInt(basic)+parseInt(allowance);
+  document.getElementById("id12").value=gross;
+  var net=parseInt(gross)-parseInt(deduction);
+  document.getElementById("id13").value=net;
+}
+</script>
+</head>
+<body bgcolor=yellow>
+<h2 style="text-align:center;color:blue">Add Salary Information</h2>
+<form action="addSal.jsp">
+<table border="0" align="center">
+<tr><td>Emp Id:</td><td><input type="text" name="empid" id="id1"></td></tr>
+<tr><td>Basic:</td><td><input type="text" name="basicsal" id="id2"></td></tr>
+<tr><td></td><td><input type="button" value="generate" onclick="fun()"></td></tr>
+<tr><td>HRA: </td><td><input type="text" name="hra" id="id3" readonly></td></tr>
+<tr><td>TA: </td><td><input type="text" name="ta" id="id4" readonly></td></tr>
+<tr><td>DA:</td><td><input type="text" name="da" id="id5" readonly></td></tr>
+<tr><td>Loan:</td><td><input type="text" name="loan" id="id6" readonly></td></tr>
+<tr><td>ESI:</td><td><input type="text" name="esi" id="id7" readonly></td></tr>
+<tr><td>PF:</td><td><input type="text" name="pf" id="id8" readonly></td></tr>
+<tr><td>IT:</td><td><input type="text" name="it" id="id9" readonly></td></tr>
+<tr><td>Allowance: </td><td><input type="text" name="allowance" id="id10" readonly></td></tr>
+<tr><td>Deduction:</td><td><input type="text" name="deduction" id="id11" readonly></td></tr>
+<tr><td>Gross Salary:</td><td><input type="text" name="grosssal" id="id12" readonly></td></tr>
+<tr><td>Net Salary:</td><td><input type="text" name="netsal" id="id13" readonly></td></tr>
+<tr><td></td><td colspan="2">
+        <input type="submit" value="submit"> <input type="reset" value="cancel"></td></tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <link href='style.css' rel='stylesheet' type='text/css'>
+
+<div class="login">
+  <div class="login-header">
+    <h1>Employee Login</h1>
+  </div>
+    <form name="loginform2"  action="employeeLogin.jsp" onsubmit="return W3docs()" method="post" class="w3docs">
+  <div class="login-form">
+    <h3>Username:</h3>
+    <input type="text" placeholder="Username"/><br>
+    <h3>Password:</h3>
+    <input type="password" placeholder="Password"/>
+    <br>
+    <input type="submit" value="Login" class="login-button"/>
+    
+     <input type="reset" value="Cancel" class="cancel-button"/>
+      <a href="Login.html"> Admin Login</a>
+</div>
+</div>
+         <script>
+      function W3docs()                                    
+      { 
+      var username = document.forms["loginform2"]["username"];  
+          var password =  document.forms["loginform2"]["password"];
+          if (username.value == "")                                   
+          { 
+              alert("Please enter a valid username."); 
+              username.focus(); 
+              return false; 
+          }    
+          if (password.value =="")                 
+          { 
+             alert("Please enter a password"); 
+              password.focus(); 
+              return false; 
+          } 
+          return true; 
+      }
+    </script> 
+
+    </body>
+</html>

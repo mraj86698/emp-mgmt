@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Employee Info</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body bgcolor='pink'>
+        
+        <center>
+        <h1>Add Employee Information</h1>
+        <form name="empdetails" action="addEmp.jsp" onsubmit="return W3docs()" method="post" class="w3docs">
+        <table border="0" align="center">
+        <tr><td>Emp Id:</td><td><input type="text" name="empid"></td></tr>
+        <tr><td>Emp Name:</td><td><input type="text" name="empname"></td></tr>
+        <tr><td>UserName:</td><td><input type="text" name="username"></td></tr>
+        <tr><td>Password:</td><td><input type="password" name="password"></td></tr>
+        <tr><td>Role:</td><td><select name="role">
+                <option value="admin">Admin</option>
+                <option value="employee">Employee</option>
+                </select></td></tr>
+        <tr><td>Address:</td><td><input type="text" name="address"></td></tr>
+        <tr><td>Mob No:</td><td><input type="tel" required name="mobno"></td></tr>
+        <tr><td>Email:</td><td><input type="email" required name="email"></td></tr>
+        <tr><td>Designation:</td><td><input type="text" name="des"></td></tr>
+        <tr><td></td><td colspan="2">
+        <input type="submit" value="submit">
+        <input type="reset" value="Cancel"></td></tr>
+        </table>
+        </form>
+        <script> 
+      function W3docs()                                    
+      { 
+          var empid = document.forms["empdetails"]["empid"];               
+          var empname = document.forms["empdetails"]["empname"];    
+          var username = document.forms["empdetails"]["username"];  
+          var password =  document.forms["empdetails"]["password"];  
+          var address = document.forms["empdetails"]["address"];  
+          var mobno = document.forms["empdetails"]["mobno"];  
+          var email = document.forms["empdetails"]["email"]; 
+           var des = document.forms["empdetails"]["des"];
+
+          if (empid.value == "")                                  
+          { 
+              alert("Please enter Employee ID."); 
+              empid.focus(); 
+              return false; 
+          }    
+          if (empname.value == "")                               
+          { 
+              alert("Please enter Employee Name."); 
+              empname.focus(); 
+              return false; 
+          }        
+          if (username.value == "")                                   
+          { 
+              alert("Please enter a valid username."); 
+              username.focus(); 
+              return false; 
+          }    
+          if (password.value =="")                 
+          { 
+             alert("Please enter a password"); 
+              password.focus(); 
+              return false; 
+          }    
+          if (address.value =="")                 
+          { 
+              alert("Please enter a  address."); 
+              address.focus(); 
+              return false; 
+          }    
+          if (mobno.value == "")                           
+          { 
+              alert("Please enter employee Mobile number."); 
+              mobno.focus(); 
+              return false; 
+          }  
+           if (email.value == "")                                   
+          { 
+              alert("Please enter a valid e-mail address."); 
+              email.focus(); 
+              return false; 
+          }    
+          if (email.value.indexOf("@", 0) < 0)                        
+          { 
+              alert("Please enter a valid e-mail address."); 
+              email.focus(); 
+              return false; 
+          }    
+          if (des.value=="")                  
+          { 
+              alert("Please enter employee designation"); 
+              des.focus(); 
+              return false; 
+          } 
+         
+          return true; 
+      }
+    </script> 
+        
+        
+        <a href="adminMain.html">Go Home</a>
+        </center>
+    </body>
+</html>
